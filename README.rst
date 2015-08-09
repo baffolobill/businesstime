@@ -6,9 +6,11 @@ This fork was completelly rewritten. It based on this https://github.com/florian
 Unfortunatelly, there is not tests yet. Just awful `businesstime/test_1.py` with prints and comments.
 Also it doesn't handle properly the case when some tasks starts/ends before/between/after inverval(s). What I'm trying to say. Let's look at this picture:
 
- (1)            (2)
---*--|--------|--*--|--------|--
-     9       13     14       18
+    +-------------------------------------+
+    |  (1)            (2)                 |
+    | --*--|--------|--*--|--------|--    |
+    |      9       13     14       18     |
+    +-------------------------------------+
 
 At point (1) employee starts to work on some task (for instance, in 8:30 a.m.). At point (2) - he finished (for instance, in 13:20). `Business.timedelta` takes into account only time from 9 to 13. It meens, our employee solved the task for 4 hours. But it is not. He completed it in 4 hours and 50 minutes.
 
