@@ -1,3 +1,7 @@
+0.2.0
+=====
+* Rewritten.
+
 0.1.6
 ========
 * Handle US federal holidays that fall on the weekend but are observed on Friday/Monday (#8)
